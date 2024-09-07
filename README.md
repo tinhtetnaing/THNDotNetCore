@@ -1,5 +1,4 @@
-C# -> language				
-.Net -> Framework				
+
 				
 Console App				
 Window Form				
