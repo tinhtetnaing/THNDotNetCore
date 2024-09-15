@@ -1,50 +1,18 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Data;
 using System.Data.SqlClient;
+using THNDotNetCore.ConsoleApp;
 
-Console.WriteLine("Hello, World!");
-//Console.ReadKey();
+AdoDotNetExample adoDotNet = new AdoDotNetExample();
 
-//max con => 100
-//not close => connection time our err
+adoDotNet.Read();
 
-string connectionString = "Data Source=DESKTOP-EPUBLLL; Initial Catalog=MyDB; User ID = sa; Password= sa@123;";
-SqlConnection connection = new SqlConnection(connectionString);
-Console.WriteLine("Connection Opening");
-connection.Open();
-Console.WriteLine("Connection Opened");
+adoDotNet.Create("test_title","test_author","test_content");
 
-string query = @"SELECT [BlogId]
-      ,[BlogTitle]
-      ,[BlogAuthor]
-      ,[BlogContent]
-      ,[DeleteFlag]
-  FROM [dbo].[TBL_BLOG] where DeleteFlag = 0";
+adoDotNet.Edit(15);
 
-SqlCommand cmd = new SqlCommand(query, connection);
-//SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-//DataTable dt = new DataTable();
-//adapter.Fill(dt);
+adoDotNet.Update(15, "Update_Title", "Update_Author", "Update_Content");
 
-SqlDataReader reader = cmd.ExecuteReader();
-while (reader.Read())
-{
-    Console.WriteLine(reader["BlogId"]);
-    Console.WriteLine(reader["BlogTitle"]);
-    Console.WriteLine(reader["BlogAuthor"]);
-    Console.WriteLine(reader["BlogContent"]);
-}
-
-Console.WriteLine("Connection Closing");
-connection.Close();
-Console.WriteLine("Connection Closed");
-
-//foreach ( DataRow dr in dt.Rows)
-//{
-//    Console.WriteLine(dr["BlogId"]);
-//    Console.WriteLine(dr["BlogTitle"]);
-//    Console.WriteLine(dr["BlogAuthor"]);
-//    Console.WriteLine(dr["BlogContent"]);
-//}
+adoDotNet.Delete(15);
 
 Console.ReadKey();
