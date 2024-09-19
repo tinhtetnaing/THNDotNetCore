@@ -18,4 +18,12 @@ using THNDotNetCore.ConsoleApp;
 //dapper.Read();
 //dapper.Delete(29);
 
+EFCoreExample eFCoreExample = new EFCoreExample();
+//eFCoreExample.Read();
+//eFCoreExample.Create("EF_blogTitle", "EF_blogÄuthor", "EF_blogContent");
+eFCoreExample.Edit(30);
+eFCoreExample.Update(30, "Update_EFBlog_title", "Update_EFBlog_author", "Update_EFBlog_content");
+eFCoreExample.Read();
+//eFCoreExample.Delete(30);
+
 Console.ReadKey();

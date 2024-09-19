@@ -63,7 +63,7 @@ namespace THNDotNetCore.ConsoleApp
           FROM [dbo].[TBL_BLOG] where DeleteFlag = 0 And BlogId = @BlogId";
             using (IDbConnection db = new SqlConnection(_connectionString))
             {
-                BlogDataModel blog = db.Query<BlogDataModel>(query, new BlogDataModel
+                var blog = db.Query<BlogDataModel>(query, new BlogDataModel
                 {
                     BlogId = blogId
                 }).FirstOrDefault();
