@@ -10,3 +10,6 @@ Blazor Web Server
 .Net framework(1,2,3,3.5, 4,4.5,4.6,4.7, 4.8)			Window only support	
 .Net Core (1, 2, 2.2, 3, 3.1)			window, linux, mac	
 .Net(5, 6, 7, 8)			window, linux, mac	
+
+
+dotnet ef dbcontext scaffold "Server=DESKTOP-EPUBLLL;Database=MyDB;User Id=sa;Password=sa@123;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models -c AppDbContext -f
