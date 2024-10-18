@@ -7,7 +7,7 @@ namespace THNDotNetCore.RestApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogController : ControllerBase
+    public class BlogsController : ControllerBase
     {
         private readonly AppDbContext _db = new AppDbContext();
         [HttpGet]
@@ -27,7 +27,6 @@ namespace THNDotNetCore.RestApi.Controllers
             }
             return Ok(item);
         }
-
 
         [HttpPost]
         public IActionResult CreateBlog(TblBlog blog)
