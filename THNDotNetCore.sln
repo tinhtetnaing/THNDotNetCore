@@ -12,9 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.RestApi", "THNDotNetCore.RestApi\THNDotNetCore.RestApi.csproj", "{830D9FA6-6EF8-448E-BEA9-77D2CE9D5FC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.Database", "THNDotNetCore.Database\THNDotNetCore.Database.csproj", "{07DEB0E4-9711-42BB-A5D0-4D762477E1E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.Database", "THNDotNetCore.Database\THNDotNetCore.Database.csproj", "{07DEB0E4-9711-42BB-A5D0-4D762477E1E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.ConsoleApp2", "THNDotNetCore.ConsoleApp2\THNDotNetCore.ConsoleApp2.csproj", "{DDED2932-F2B1-4821-A16E-AEC4B7231D9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.ConsoleApp2", "THNDotNetCore.ConsoleApp2\THNDotNetCore.ConsoleApp2.csproj", "{DDED2932-F2B1-4821-A16E-AEC4B7231D9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.Shared", "THNDotNetCore.Shared\THNDotNetCore.Shared.csproj", "{F63F07C3-D08F-415F-A404-5C07E4E6CBAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{DDED2932-F2B1-4821-A16E-AEC4B7231D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDED2932-F2B1-4821-A16E-AEC4B7231D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDED2932-F2B1-4821-A16E-AEC4B7231D9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F63F07C3-D08F-415F-A404-5C07E4E6CBAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F63F07C3-D08F-415F-A404-5C07E4E6CBAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F63F07C3-D08F-415F-A404-5C07E4E6CBAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F63F07C3-D08F-415F-A404-5C07E4E6CBAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
