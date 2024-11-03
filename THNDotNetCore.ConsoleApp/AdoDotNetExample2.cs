@@ -69,19 +69,10 @@ namespace THNDotNetCore.ConsoleApp
            (@BlogTitle
 		   ,@BlogAuthor
            ,@BlogContent)";
-            var result = _adoDotNetService.Execute(query, new SqlParameterModel
-            {
-                Name = "@BlogTitle",
-                Value = title
-            }, new SqlParameterModel
-            {
-                Name = "@BlogAuthor",
-                Value = author
-            }, new SqlParameterModel
-            {
-                Name = "",
-                Value = content
-            });
+            var result = _adoDotNetService.Execute(query, 
+                new SqlParameterModel("@BlogTitle", title),
+                new SqlParameterModel("@BlogAuthor", author),
+                new SqlParameterModel("@BlogContent", content));
             Console.WriteLine(result > 0 ? "Create Successful" : "Create Fail");
         }
     }
