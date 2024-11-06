@@ -75,5 +75,36 @@ namespace THNDotNetCore.ConsoleApp
             });
             Console.WriteLine(result == 1 ? "Create Successful" : "Create Fail");
         }
+
+        public void Update(int blogId, string title, string author, string content)
+        {
+            string query = @"UPDATE [dbo].[TBL_BLOG]
+           SET [BlogTitle] = @BlogTitle
+              ,[BlogAuthor] = @BlogAuthor
+              ,[BlogContent] = @BlogContent
+         WHERE BlogId = @BlogId;";
+            int result = _dapperService.Execute(query, new BlogDataModel
+            {
+                BlogId = blogId,
+                BlogTitle = title,
+                BlogAuthor = author,
+                BlogContent = content
+            });
+            Console.WriteLine(result == 1 ? "Update Successful" : "Update fail");
+        }
+
+        public void Delete(int blogId)
+        {
+            string query = @"UPDATE [dbo].[TBL_BLOG]
+                SET [DeleteFlag] = 1
+                WHERE BlogId = @BlogId;";
+            
+             int result = _dapperService.Execute(query, new BlogDataModel
+             {
+                 BlogId = blogId
+             });
+             Console.WriteLine(result == 1 ? "Delete Successful" : "Delete fail");
+            
+        }
     }
 }
