@@ -30,7 +30,7 @@ Console.WriteLine(JsonStr);
 
 var JsonStr2 = """"{"Id":1,"Title":"Test Title","Author":"Test Author","Content":"Test Content"}"""";
 var blog2 = JsonConvert.DeserializeObject<BlogModel>(JsonStr2);
-Console.WriteLine(blog2.Title);
+Console.WriteLine(blog2.Title );
 
 public class BlogModel
 {

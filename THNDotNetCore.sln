@@ -18,7 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.ConsoleApp2",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.Shared", "THNDotNetCore.Shared\THNDotNetCore.Shared.csproj", "{F63F07C3-D08F-415F-A404-5C07E4E6CBAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.MinimalApi", "THNDotNetCore.MinimalApi\THNDotNetCore.MinimalApi.csproj", "{82055F16-7E4E-477E-B9BA-0B68E2446434}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.MinimalApi", "THNDotNetCore.MinimalApi\THNDotNetCore.MinimalApi.csproj", "{82055F16-7E4E-477E-B9BA-0B68E2446434}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.BirdMinimalApi", "THNDotNetCore.BirdMinimalApi\THNDotNetCore.BirdMinimalApi.csproj", "{7EA0229B-F1F4-46BB-95C9-FB36AE8C6EAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{82055F16-7E4E-477E-B9BA-0B68E2446434}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82055F16-7E4E-477E-B9BA-0B68E2446434}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82055F16-7E4E-477E-B9BA-0B68E2446434}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EA0229B-F1F4-46BB-95C9-FB36AE8C6EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA0229B-F1F4-46BB-95C9-FB36AE8C6EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA0229B-F1F4-46BB-95C9-FB36AE8C6EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA0229B-F1F4-46BB-95C9-FB36AE8C6EAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
