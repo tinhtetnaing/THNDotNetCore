@@ -41,7 +41,7 @@ app.MapGet("/weatherforecast", () =>
 app.MapGet("/birds", () =>
 {
     var filePath = "wwwroot/Data/Birds.json";
-    var JsonStr = File.ReadAllText(filePath);
+    string JsonStr = File.ReadAllText(filePath);
     var result = JsonConvert.DeserializeObject<BirdResponseModel>(JsonStr)!;
     return Results.Ok(result.Tbl_Bird);
 });
