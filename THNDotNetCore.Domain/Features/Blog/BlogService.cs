@@ -54,19 +54,46 @@ namespace THNDotNetCore.Domain.Features.Blog
             return item;
         }
 
-        public bool DeleteBlog(int id)
+        public TblBlog PatchBlog(int id, TblBlog blog)
+        {
+            var item = _db.TblBlogs.FirstOrDefault(x => x.BlogId == id);
+            if (item is null)
+            {
+                return null;
+            }
+            if (!string.IsNullOrEmpty(blog.BlogTitle))
+            {
+                item.BlogTitle = blog.BlogTitle;
+            }
+            if (!string.IsNullOrEmpty(blog.BlogAuthor))
+            {
+                item.BlogAuthor = blog.BlogAuthor;
+
+            }
+            if (!string.IsNullOrEmpty(blog.BlogContent))
+            {
+                item.BlogContent = blog.BlogContent;
+
+            }
+            _db.Entry(item).State = EntityState.Modified;
+            _db.SaveChanges();
+            return item;
+        }
+
+        public bool? DeleteBlog(int id)
         {
             var item = _db.TblBlogs
                 .AsNoTracking()
                 .FirstOrDefault(x => x.BlogId == id);
             if (item is null)
             {
-                return false;
+                return null;
             }
 
             _db.Entry(item).State = EntityState.Deleted;
             var result = _db.SaveChanges();
             return result > 0;
         }
+
     }
 }
