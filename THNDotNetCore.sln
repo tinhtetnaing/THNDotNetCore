@@ -24,7 +24,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.BirdMinimalAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.BurmeseAgricultureApi", "THNDotNetCore.BurmeseAgriculture\THNDotNetCore.BurmeseAgricultureApi.csproj", "{31A6A8D0-1A0B-44C9-AE76-C71E6BB01EB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.Domain", "THNDotNetCore.Domain\THNDotNetCore.Domain.csproj", "{4D47E0BA-5AA9-4EAE-A776-4CFAE851E111}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.Domain", "THNDotNetCore.Domain\THNDotNetCore.Domain.csproj", "{4D47E0BA-5AA9-4EAE-A776-4CFAE851E111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.MiniKpay", "THNDotNetCore.MiniKpay\THNDotNetCore.MiniKpay.csproj", "{0039E526-053E-4D11-8B60-5D458E06FC98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,10 @@ Global
 		{4D47E0BA-5AA9-4EAE-A776-4CFAE851E111}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D47E0BA-5AA9-4EAE-A776-4CFAE851E111}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D47E0BA-5AA9-4EAE-A776-4CFAE851E111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0039E526-053E-4D11-8B60-5D458E06FC98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0039E526-053E-4D11-8B60-5D458E06FC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0039E526-053E-4D11-8B60-5D458E06FC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0039E526-053E-4D11-8B60-5D458E06FC98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
