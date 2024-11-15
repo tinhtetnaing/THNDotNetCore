@@ -13,7 +13,7 @@ namespace THNDotNetCore.MiniKpay.Services
             _db = db;
         }
 
-        public List<UsersModel>? GetUsers()
+        public List<UserModel>? GetUsers()
         {
             var lst = _db.Users.AsNoTracking().ToList();
             if (lst is null)
@@ -23,7 +23,7 @@ namespace THNDotNetCore.MiniKpay.Services
             return lst;
         }
 
-        public UsersModel GetUserById(int id)
+        public UserModel GetUserById(int id)
         {
             var user = _db.Users.AsNoTracking().FirstOrDefault(x => x.Id == id);
             if(user is null)
@@ -32,5 +32,43 @@ namespace THNDotNetCore.MiniKpay.Services
             }
             return user;
         }
+
+        public int CreateUser(UserModel user)
+        {
+            _db.Users.Add(user);  
+            var result = _db.SaveChanges();
+            return result;
+        }
+
+        public int UpdateUser(int id, UserModel userModel)
+        {
+            var user = _db.Users.AsNoTracking().FirstOrDefault(x => x.Id == id);
+            if(user is null)
+            {
+                return 0;
+            }
+            user.Name = userModel.Name;
+            user.MobileNumber = userModel.MobileNumber;
+            user.Balance = userModel.Balance;
+            user.Pin = userModel.Pin;
+
+            _db.Entry(user).State = EntityState.Modified;
+            var result = _db.SaveChanges();
+            return result;
+        }
+
+        public int DeleteUser(int id)
+        {
+            var user = _db.Users.AsNoTracking().FirstOrDefault(x => x.Id == id);
+            if (user is null)
+            {
+                return 0;
+            }
+
+            _db.Entry(user).State = EntityState.Deleted;
+            var result = _db.SaveChanges();
+            return result;
+        }
+
     }
 }

@@ -9,6 +9,6 @@ namespace THNDotNetCore.MiniKpay.Db
         {
         }
 
-        public DbSet<UsersModel> Users { get; set; }
+        public DbSet<UserModel> Users { get; set; }
     }
 }
