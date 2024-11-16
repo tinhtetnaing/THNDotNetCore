@@ -14,6 +14,18 @@ namespace THNDotNetCore.MiniKpay.Features.Transfer
             _transfer = transfer;
         }
 
+        [HttpGet]
+        [Route("TransactionHistory")]
+        public IActionResult TransactionHistory()
+        {
+            var response = _transfer.GetTranfers();
+            if(response.RespCode != "I0000")
+            {
+                return BadRequest(response.RespCode);
+            }
+            return Ok(response);
+        }
+
         [HttpPost]
         public IActionResult Transfer(TransferModel transfer)
         {

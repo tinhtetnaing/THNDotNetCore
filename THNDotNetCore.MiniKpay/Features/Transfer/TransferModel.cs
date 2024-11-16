@@ -17,6 +17,7 @@ namespace THNDotNetCore.MiniKpay.Features.Transfer
     {
         public string RespCode { get; set; }
         public string RespDescription { get; set; }
-        public TransferModel transfer {  get; set; }
+        public TransferModel Transfer {  get; set; }
+        public List<TransferModel> TransferLst { get; set; }
     }
 }

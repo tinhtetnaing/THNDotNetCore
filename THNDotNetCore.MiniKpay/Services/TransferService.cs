@@ -1,4 +1,5 @@
-﻿using THNDotNetCore.MiniKpay.Db;
+﻿using Microsoft.EntityFrameworkCore;
+using THNDotNetCore.MiniKpay.Db;
 using THNDotNetCore.MiniKpay.Features.Transfer;
 
 namespace THNDotNetCore.MiniKpay.Services
@@ -10,6 +11,12 @@ namespace THNDotNetCore.MiniKpay.Services
         public TransferService(AppDbContext db)
         {
             _db = db;
+        }
+
+        public List<TransferModel> GetTransfers()
+        {
+            var transfers = _db.Transfer.AsNoTracking().ToList();
+            return transfers;
         }
 
         public int CreateTransfer(TransferModel model)

@@ -15,6 +15,22 @@ namespace THNDotNetCore.MiniKpay.Features.Transfer
             _transferService = transferService; 
         }
 
+        public TransferResponseModel GetTransfers()
+        {
+            TransferResponseModel response = new TransferResponseModel();
+            var lst = _transferService.GetTransfers();
+            if(lst is null)
+            {
+                response.RespCode = "I0001";
+                response.RespDescription = "No Transaction History";
+                return response;
+            }
+            response.TransferLst = lst;
+            response.RespCode = "I0000";
+            response.RespDescription = "Success";
+            return response;
+        }
+
         public TransferResponseModel CreateTransfer(TransferModel model)
         {
             TransferResponseModel response = new TransferResponseModel();

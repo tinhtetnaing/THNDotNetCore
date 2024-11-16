@@ -15,6 +15,12 @@ namespace THNDotNetCore.MiniKpay.Features.Transfer
             _deposit = deposit;
         }
 
+        public TransferResponseModel GetTranfers()
+        {
+            var response = _transfer.GetTransfers();
+            return response;
+        }
+
         public TransferResponseModel Transfer(TransferModel transfer)
         {
             TransferResponseModel response = new TransferResponseModel();
@@ -70,7 +76,7 @@ namespace THNDotNetCore.MiniKpay.Features.Transfer
             }
             response.RespCode = "I0000";
             response.RespDescription = "Success";
-            response.transfer = transfer;
+            response.Transfer = transfer;
             return response;
         }
     }
