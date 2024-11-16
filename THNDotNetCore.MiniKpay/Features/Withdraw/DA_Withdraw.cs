@@ -1,22 +1,22 @@
 ﻿using THNDotNetCore.MiniKpay.Features.User;
 using THNDotNetCore.MiniKpay.Services;
 
-namespace THNDotNetCore.MiniKpay.Features.Deposit
+namespace THNDotNetCore.MiniKpay.Features.Withdraw
 {
-    public class DA_Deposit
+    public class DA_Withdraw
     {
         private readonly UserService _userService;
 
-        public DA_Deposit(UserService userService)
+        public DA_Withdraw(UserService userService)
         {
             _userService = userService;
         }
 
         public UserResponseModel GetUserByMobileNo(string mobileNo)
-        { 
+        {
             UserResponseModel response = new UserResponseModel();
             var user = _userService.GetUserByMobileNo(mobileNo);
-            if(user is null)
+            if (user is null)
             {
                 response.RespCode = "I0001";
                 response.RespDescription = "User not found";
@@ -32,7 +32,7 @@ namespace THNDotNetCore.MiniKpay.Features.Deposit
         {
             UserResponseModel response = new UserResponseModel();
             var result = _userService.UpdateUser(id, user);
-            if(result == 0)
+            if (result == 0)
             {
                 response.RespCode = "I0004";
                 response.RespDescription = "Update fail";

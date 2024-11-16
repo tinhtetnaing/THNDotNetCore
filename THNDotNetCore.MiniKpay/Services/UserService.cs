@@ -12,8 +12,7 @@ namespace THNDotNetCore.MiniKpay.Services
         {
             _db = db;
         }
-
-        #region User
+       
         public List<UserModel>? GetUsers()
         {
             var lst = _db.Users.AsNoTracking().ToList();
@@ -24,7 +23,7 @@ namespace THNDotNetCore.MiniKpay.Services
             return lst;
         }
 
-        public UserModel GetUserById(int id)
+        public UserModel? GetUserById(int id)
         {
             var user = _db.Users.AsNoTracking().FirstOrDefault(x => x.Id == id);
             if(user is null)
@@ -70,7 +69,17 @@ namespace THNDotNetCore.MiniKpay.Services
             var result = _db.SaveChanges();
             return result;
         }
-        #endregion User
+
+        public UserModel? GetUserByMobileNo(string mobileNo)
+        {
+            var user = _db.Users.AsNoTracking().FirstOrDefault(x => x.MobileNumber == mobileNo);
+            if (user is null)
+            {
+                return null;
+            }
+            return user;
+        }
+        
 
     }
 }
