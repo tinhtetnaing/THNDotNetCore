@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using THNDotNetCore.MiniKpay.Db;
-using THNDotNetCore.MiniKpay.Models;
+using THNDotNetCore.MiniKpay.Features.Deposit;
 using THNDotNetCore.MiniKpay.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,11 +19,14 @@ builder.Services.AddDbContext<AppDbContext>(option =>
 
 builder.Services.AddSwaggerGen(options =>
 {
-    options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First()); // Choose the first conflict
+    options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First()); 
 });
 
 
-builder.Services.AddScoped<UsersService>();
+builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<DepositService>();
+builder.Services.AddScoped<BL_Deposit>();
+builder.Services.AddScoped<DA_Deposit>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

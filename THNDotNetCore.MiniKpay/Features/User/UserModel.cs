@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace THNDotNetCore.MiniKpay.Models
+namespace THNDotNetCore.MiniKpay.Features.User
 {
     [Table("Users")]
     public class UserModel
@@ -11,4 +11,12 @@ namespace THNDotNetCore.MiniKpay.Models
         public decimal Balance { get; set; }
         public int Pin { get; set; }
     }
+
+    public class UserResponseModel
+    {
+        public string RespCode { get; set; }
+        public string RespDescription { get; set; }
+        public UserModel user { get; set; }
+    }
+
 }

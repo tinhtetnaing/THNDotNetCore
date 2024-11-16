@@ -1,18 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using THNDotNetCore.MiniKpay.Db;
-using THNDotNetCore.MiniKpay.Models;
+using THNDotNetCore.MiniKpay.Features.User;
 
 namespace THNDotNetCore.MiniKpay.Services
 {
-    public class UsersService
+    public class UserService
     {
         private readonly AppDbContext _db;
 
-        public UsersService(AppDbContext db)
+        public UserService(AppDbContext db)
         {
             _db = db;
         }
 
+        #region User
         public List<UserModel>? GetUsers()
         {
             var lst = _db.Users.AsNoTracking().ToList();
@@ -69,6 +70,7 @@ namespace THNDotNetCore.MiniKpay.Services
             var result = _db.SaveChanges();
             return result;
         }
+        #endregion User
 
     }
 }

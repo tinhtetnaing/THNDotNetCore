@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using THNDotNetCore.MiniKpay.Models;
+using THNDotNetCore.MiniKpay.Features.User;
 
 namespace THNDotNetCore.MiniKpay.Db
 {

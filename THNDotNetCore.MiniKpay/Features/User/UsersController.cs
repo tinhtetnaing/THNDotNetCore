@@ -2,19 +2,18 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using THNDotNetCore.MiniKpay.Db;
-using THNDotNetCore.MiniKpay.Models;
 using THNDotNetCore.MiniKpay.Services;
 
-namespace THNDotNetCore.MiniKpay.Controllers
+namespace THNDotNetCore.MiniKpay.Features.User
 {
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
         private readonly AppDbContext _db;
-        private readonly UsersService _userService;
+        private readonly UserService _userService;
 
-        public UsersController(AppDbContext db,UsersService userService)
+        public UsersController(AppDbContext db, UserService userService)
         {
             _db = db;
             _userService = userService;
@@ -41,7 +40,7 @@ namespace THNDotNetCore.MiniKpay.Controllers
         public IActionResult Create(UserModel user)
         {
             var result = _userService.CreateUser(user);
-            if(result == 0)
+            if (result == 0)
             {
                 return BadRequest("User Create Failed.");
             }
