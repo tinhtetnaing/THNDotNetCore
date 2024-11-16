@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using THNDotNetCore.MiniKpay.Db;
 using THNDotNetCore.MiniKpay.Features.Deposit;
+using THNDotNetCore.MiniKpay.Features.Transfer;
 using THNDotNetCore.MiniKpay.Features.Withdraw;
 using THNDotNetCore.MiniKpay.Services;
 
@@ -25,10 +26,13 @@ builder.Services.AddSwaggerGen(options =>
 
 
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<TransferService>();
 builder.Services.AddScoped<BL_Deposit>();
 builder.Services.AddScoped<DA_Deposit>();
 builder.Services.AddScoped<BL_Withdraw>();
 builder.Services.AddScoped<DA_Withdraw>();
+builder.Services.AddScoped<BL_Transfer>();
+builder.Services.AddScoped<DA_Transfer>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
