@@ -1,8 +1,8 @@
-﻿using THNDotNetCore.MiniKpay.Features.Deposit;
-using THNDotNetCore.MiniKpay.Features.User;
-using THNDotNetCore.MiniKpay.Services;
+﻿using THNDotNetCore.MiniKpay.Database.Models;
+using THNDotNetCore.MiniKpay.Domain.Features.Transfer;
+using THNDotNetCore.MiniKpay.Domain.Features.User;
 
-namespace THNDotNetCore.MiniKpay.Features.Transfer
+namespace THNDotNetCore.MiniKpay.Api.Features.Transfer
 {
     public class DA_Transfer
     {
@@ -12,14 +12,14 @@ namespace THNDotNetCore.MiniKpay.Features.Transfer
         public DA_Transfer(UserService userService, TransferService transferService)
         {
             _userService = userService;
-            _transferService = transferService; 
+            _transferService = transferService;
         }
 
         public TransferResponseModel GetTransfers()
         {
             TransferResponseModel response = new TransferResponseModel();
             var lst = _transferService.GetTransfers();
-            if(lst is null)
+            if (lst is null)
             {
                 response.RespCode = "I0001";
                 response.RespDescription = "No Transaction History";
@@ -35,7 +35,7 @@ namespace THNDotNetCore.MiniKpay.Features.Transfer
         {
             TransferResponseModel response = new TransferResponseModel();
             var result = _transferService.CreateTransfer(model);
-            if(result == 0)
+            if (result == 0)
             {
                 response.RespCode = "I0001";
                 response.RespDescription = "Create Fail";

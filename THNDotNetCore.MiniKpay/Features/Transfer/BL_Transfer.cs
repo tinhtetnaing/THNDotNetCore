@@ -1,8 +1,8 @@
 ﻿using System.Net.NetworkInformation;
-using THNDotNetCore.MiniKpay.Features.Deposit;
-using THNDotNetCore.MiniKpay.Features.User;
+using THNDotNetCore.MiniKpay.Api.Features.Deposit;
+using THNDotNetCore.MiniKpay.Database.Models;
 
-namespace THNDotNetCore.MiniKpay.Features.Transfer
+namespace THNDotNetCore.MiniKpay.Api.Features.Transfer
 {
     public class BL_Transfer
     {
@@ -24,20 +24,20 @@ namespace THNDotNetCore.MiniKpay.Features.Transfer
         public TransferResponseModel Transfer(TransferModel transfer)
         {
             TransferResponseModel response = new TransferResponseModel();
-            if(transfer.FromMobileNo == transfer.ToMobileNo)
+            if (transfer.FromMobileNo == transfer.ToMobileNo)
             {
                 response.RespCode = "I0005";
                 response.RespDescription = "Mobile Numbers must not be the same";
                 return response;
             }
             var fromUser = _deposit.GetUserByMobileNo(transfer.FromMobileNo);
-            if(fromUser is null)
+            if (fromUser is null)
             {
                 response.RespCode = "I0001";
                 response.RespDescription = "User not found";
                 return response;
             }
-            if(fromUser.user.Balance < transfer.Amount)
+            if (fromUser.user.Balance < transfer.Amount)
             {
                 response.RespCode = "I0003";
                 response.RespDescription = "No enough balance";

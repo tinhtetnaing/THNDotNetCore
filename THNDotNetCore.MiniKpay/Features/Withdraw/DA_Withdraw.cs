@@ -1,7 +1,7 @@
-﻿using THNDotNetCore.MiniKpay.Features.User;
-using THNDotNetCore.MiniKpay.Services;
+﻿using THNDotNetCore.MiniKpay.Database.Models;
+using THNDotNetCore.MiniKpay.Domain.Features.User;
 
-namespace THNDotNetCore.MiniKpay.Features.Withdraw
+namespace THNDotNetCore.MiniKpay.Api.Features.Withdraw
 {
     public class DA_Withdraw
     {

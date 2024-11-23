@@ -1,6 +1,5 @@
-﻿using THNDotNetCore.MiniKpay.Features.User;
-
-namespace THNDotNetCore.MiniKpay.Features.Deposit
+﻿using THNDotNetCore.MiniKpay.Database.Models;
+namespace THNDotNetCore.MiniKpay.Api.Features.Deposit
 {
     public class BL_Deposit
     {
@@ -13,8 +12,8 @@ namespace THNDotNetCore.MiniKpay.Features.Deposit
 
         public UserResponseModel Deposit(string mobileNo, decimal amount, int pin)
         {
-            var response  = _daDeposit.GetUserByMobileNo(mobileNo);
-            if(response.RespCode != "I0000")
+            var response = _daDeposit.GetUserByMobileNo(mobileNo);
+            if (response.RespCode != "I0000")
             {
                 return response;
             }
@@ -24,7 +23,7 @@ namespace THNDotNetCore.MiniKpay.Features.Deposit
                 response.RespDescription = "Amount must be greater than 0";
                 return response;
             }
-            if(response.user.Pin != pin)
+            if (response.user.Pin != pin)
             {
                 response.RespCode = "I0003";
                 response.RespDescription = "Wrong PIN";

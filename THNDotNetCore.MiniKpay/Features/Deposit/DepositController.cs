@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using THNDotNetCore.MiniKpay.Features.User;
-using THNDotNetCore.MiniKpay.Services;
 
-namespace THNDotNetCore.MiniKpay.Features.Deposit
+namespace THNDotNetCore.MiniKpay.Api.Features.Deposit
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -19,8 +17,8 @@ namespace THNDotNetCore.MiniKpay.Features.Deposit
         [HttpPost]
         public IActionResult Deposit(string phoneNumber, decimal amount, int pin)
         {
-            var response = _deposit.Deposit(phoneNumber,amount,pin);
-            if(response.RespCode != "I0000")
+            var response = _deposit.Deposit(phoneNumber, amount, pin);
+            if (response.RespCode != "I0000")
             {
                 return BadRequest(response.RespDescription);
             }

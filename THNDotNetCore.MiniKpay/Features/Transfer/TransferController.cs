@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using THNDotNetCore.MiniKpay.Database.Models;
 
-namespace THNDotNetCore.MiniKpay.Features.Transfer
+namespace THNDotNetCore.MiniKpay.Api.Features.Transfer
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -19,7 +20,7 @@ namespace THNDotNetCore.MiniKpay.Features.Transfer
         public IActionResult TransactionHistory()
         {
             var response = _transfer.GetTranfers();
-            if(response.RespCode != "I0000")
+            if (response.RespCode != "I0000")
             {
                 return BadRequest(response.RespCode);
             }
@@ -30,7 +31,7 @@ namespace THNDotNetCore.MiniKpay.Features.Transfer
         public IActionResult Transfer(TransferModel transfer)
         {
             var response = _transfer.Transfer(transfer);
-            if(response.RespCode != "I0000")
+            if (response.RespCode != "I0000")
             {
                 return BadRequest(response.RespDescription);
             }

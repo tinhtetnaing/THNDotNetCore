@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using THNDotNetCore.MiniKpay.Db;
-using THNDotNetCore.MiniKpay.Features.Deposit;
-using THNDotNetCore.MiniKpay.Features.Transfer;
-using THNDotNetCore.MiniKpay.Features.Withdraw;
-using THNDotNetCore.MiniKpay.Services;
+using THNDotNetCore.MiniKpay.Api.Features.Deposit;
+using THNDotNetCore.MiniKpay.Api.Features.Transfer;
+using THNDotNetCore.MiniKpay.Api.Features.Withdraw;
+using THNDotNetCore.MiniKpay.Domain.Features.Transfer;
+using THNDotNetCore.MiniKpay.Domain.Features.User;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,16 +14,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<AppDbContext>(option =>
-{
-    option.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
-}, ServiceLifetime.Transient);
-
-builder.Services.AddSwaggerGen(options =>
-{
-    options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First()); 
-});
-
+//builder.Services.AddSwaggerGen(options =>
+//{
+//    options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First()); 
+//});
 
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<TransferService>();

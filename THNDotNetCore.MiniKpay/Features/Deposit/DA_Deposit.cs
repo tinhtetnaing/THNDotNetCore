@@ -1,7 +1,7 @@
-﻿using THNDotNetCore.MiniKpay.Features.User;
-using THNDotNetCore.MiniKpay.Services;
+﻿using THNDotNetCore.MiniKpay.Database.Models;
+using THNDotNetCore.MiniKpay.Domain.Features.User;
 
-namespace THNDotNetCore.MiniKpay.Features.Deposit
+namespace THNDotNetCore.MiniKpay.Api.Features.Deposit
 {
     public class DA_Deposit
     {

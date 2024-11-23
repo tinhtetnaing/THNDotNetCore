@@ -1,21 +1,17 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using THNDotNetCore.MiniKpay.Db;
-using THNDotNetCore.MiniKpay.Services;
-
+using THNDotNetCore.MiniKpay.Database.Models;
+using THNDotNetCore.MiniKpay.Domain.Features.User;
 namespace THNDotNetCore.MiniKpay.Features.User
 {
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly AppDbContext _db;
         private readonly UserService _userService;
 
-        public UsersController(AppDbContext db, UserService userService)
+        public UsersController(UserService userService)
         {
-            _db = db;
             _userService = userService;
         }
 

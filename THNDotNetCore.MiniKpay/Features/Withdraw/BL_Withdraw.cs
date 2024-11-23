@@ -1,7 +1,6 @@
-﻿using THNDotNetCore.MiniKpay.Features.Deposit;
-using THNDotNetCore.MiniKpay.Features.User;
+﻿using THNDotNetCore.MiniKpay.Database.Models;
 
-namespace THNDotNetCore.MiniKpay.Features.Withdraw
+namespace THNDotNetCore.MiniKpay.Api.Features.Withdraw
 {
     public class BL_Withdraw
     {

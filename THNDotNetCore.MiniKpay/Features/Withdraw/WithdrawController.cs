@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace THNDotNetCore.MiniKpay.Features.Withdraw
+namespace THNDotNetCore.MiniKpay.Api.Features.Withdraw
 {
     [Route("api/[controller]")]
     [ApiController]
