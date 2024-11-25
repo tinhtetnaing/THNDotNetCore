@@ -28,9 +28,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.Domain", "THN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.MiniKpay.Api", "THNDotNetCore.MiniKpay\THNDotNetCore.MiniKpay.Api.csproj", "{0039E526-053E-4D11-8B60-5D458E06FC98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.MiniKpay.Database", "THNDotNetCore.MiniKpay.Database\THNDotNetCore.MiniKpay.Database.csproj", "{4B8DB4FB-A6D1-420F-91F5-A171BF630ADF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.MiniKpay.Database", "THNDotNetCore.MiniKpay.Database\THNDotNetCore.MiniKpay.Database.csproj", "{4B8DB4FB-A6D1-420F-91F5-A171BF630ADF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.MiniKpay.Domain", "THNDotNetCore.MiniKpay.Domain\THNDotNetCore.MiniKpay.Domain.csproj", "{073BB0BF-7ABC-4972-8A28-9865C9795EC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.MiniKpay.Domain", "THNDotNetCore.MiniKpay.Domain\THNDotNetCore.MiniKpay.Domain.csproj", "{073BB0BF-7ABC-4972-8A28-9865C9795EC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.HttpClientConsoleApp", "THNDotNetCore.HttpClientConsoleApp\THNDotNetCore.HttpClientConsoleApp.csproj", "{CFE2A06F-C860-4C0D-84E5-FD60ABD68FED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +88,10 @@ Global
 		{073BB0BF-7ABC-4972-8A28-9865C9795EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{073BB0BF-7ABC-4972-8A28-9865C9795EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{073BB0BF-7ABC-4972-8A28-9865C9795EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE2A06F-C860-4C0D-84E5-FD60ABD68FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE2A06F-C860-4C0D-84E5-FD60ABD68FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE2A06F-C860-4C0D-84E5-FD60ABD68FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE2A06F-C860-4C0D-84E5-FD60ABD68FED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
