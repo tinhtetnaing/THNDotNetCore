@@ -1,6 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using THNDotNetCore.Database.Models;
+using THNDotNetCore.Domain.Features.Blog;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<AppDbContext>(opt =>
+{
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
+}, ServiceLifetime.Transient, ServiceLifetime.Transient);
+
+builder.Services.AddScoped<BlogService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

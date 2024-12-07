@@ -13,9 +13,9 @@ namespace THNDotNetCore.RestApi.Controllers
     {
         private readonly BlogService _service;
 
-        public BlogServiceController()
+        public BlogServiceController(BlogService service)
         {
-            _service = new BlogService();
+            _service = service;
         }
 
         [HttpGet]
