@@ -32,7 +32,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.MiniKpay.Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.MiniKpay.Domain", "THNDotNetCore.MiniKpay.Domain\THNDotNetCore.MiniKpay.Domain.csproj", "{073BB0BF-7ABC-4972-8A28-9865C9795EC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.HttpClientConsoleApp", "THNDotNetCore.HttpClientConsoleApp\THNDotNetCore.HttpClientConsoleApp.csproj", "{CFE2A06F-C860-4C0D-84E5-FD60ABD68FED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.HttpClientConsoleApp", "THNDotNetCore.HttpClientConsoleApp\THNDotNetCore.HttpClientConsoleApp.csproj", "{CFE2A06F-C860-4C0D-84E5-FD60ABD68FED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.MvcApp", "THNDotNetCore.MvcApp\THNDotNetCore.MvcApp.csproj", "{95C2B511-7B20-4307-9314-3D390E07E687}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -92,6 +94,10 @@ Global
 		{CFE2A06F-C860-4C0D-84E5-FD60ABD68FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFE2A06F-C860-4C0D-84E5-FD60ABD68FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFE2A06F-C860-4C0D-84E5-FD60ABD68FED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C2B511-7B20-4307-9314-3D390E07E687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C2B511-7B20-4307-9314-3D390E07E687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C2B511-7B20-4307-9314-3D390E07E687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C2B511-7B20-4307-9314-3D390E07E687}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
