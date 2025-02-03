@@ -34,7 +34,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.MiniKpay.Doma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.HttpClientConsoleApp", "THNDotNetCore.HttpClientConsoleApp\THNDotNetCore.HttpClientConsoleApp.csproj", "{CFE2A06F-C860-4C0D-84E5-FD60ABD68FED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.MvcApp", "THNDotNetCore.MvcApp\THNDotNetCore.MvcApp.csproj", "{95C2B511-7B20-4307-9314-3D390E07E687}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.MvcApp", "THNDotNetCore.MvcApp\THNDotNetCore.MvcApp.csproj", "{95C2B511-7B20-4307-9314-3D390E07E687}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.ChartWebApp", "THNDotNetCore.ChartWebApp\THNDotNetCore.ChartWebApp.csproj", "{01FE774F-0FD4-4C98-A8D8-1084BA0A2C8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -98,6 +100,10 @@ Global
 		{95C2B511-7B20-4307-9314-3D390E07E687}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95C2B511-7B20-4307-9314-3D390E07E687}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95C2B511-7B20-4307-9314-3D390E07E687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01FE774F-0FD4-4C98-A8D8-1084BA0A2C8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01FE774F-0FD4-4C98-A8D8-1084BA0A2C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01FE774F-0FD4-4C98-A8D8-1084BA0A2C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01FE774F-0FD4-4C98-A8D8-1084BA0A2C8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
