@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1.LoggingConsoleA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.LoggingWebApp", "THNDotNetCore.LoggingWebApp\THNDotNetCore.LoggingWebApp.csproj", "{F4C982AF-AC9E-4F87-88D2-B79B9C4AC04E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.EncDecConsoleApp", "THNDotNetCore.EncDecConsoleApp\THNDotNetCore.EncDecConsoleApp.csproj", "{E07785EC-3E8C-4214-9C67-0BE489B74150}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -116,6 +118,10 @@ Global
 		{F4C982AF-AC9E-4F87-88D2-B79B9C4AC04E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4C982AF-AC9E-4F87-88D2-B79B9C4AC04E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4C982AF-AC9E-4F87-88D2-B79B9C4AC04E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E07785EC-3E8C-4214-9C67-0BE489B74150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07785EC-3E8C-4214-9C67-0BE489B74150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07785EC-3E8C-4214-9C67-0BE489B74150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E07785EC-3E8C-4214-9C67-0BE489B74150}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
