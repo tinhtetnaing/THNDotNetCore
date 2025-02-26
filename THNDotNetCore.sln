@@ -38,11 +38,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.MvcApp", "THN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.ChartWebApp", "THNDotNetCore.ChartWebApp\THNDotNetCore.ChartWebApp.csproj", "{01FE774F-0FD4-4C98-A8D8-1084BA0A2C8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1.LoggingConsoleApp", "ConsoleApp1.LoggingConsoleApp\ConsoleApp1.LoggingConsoleApp.csproj", "{2CD2B995-A706-4A45-85A0-05C06944FD2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1.LoggingConsoleApp", "ConsoleApp1.LoggingConsoleApp\ConsoleApp1.LoggingConsoleApp.csproj", "{2CD2B995-A706-4A45-85A0-05C06944FD2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.LoggingWebApp", "THNDotNetCore.LoggingWebApp\THNDotNetCore.LoggingWebApp.csproj", "{F4C982AF-AC9E-4F87-88D2-B79B9C4AC04E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.LoggingWebApp", "THNDotNetCore.LoggingWebApp\THNDotNetCore.LoggingWebApp.csproj", "{F4C982AF-AC9E-4F87-88D2-B79B9C4AC04E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.EncDecConsoleApp", "THNDotNetCore.EncDecConsoleApp\THNDotNetCore.EncDecConsoleApp.csproj", "{E07785EC-3E8C-4214-9C67-0BE489B74150}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "THNDotNetCore.EncDecConsoleApp", "THNDotNetCore.EncDecConsoleApp\THNDotNetCore.EncDecConsoleApp.csproj", "{E07785EC-3E8C-4214-9C67-0BE489B74150}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THNDotNetCore.EncDecWebApi", "THNDotNetCore.EncDecWebApi\THNDotNetCore.EncDecWebApi.csproj", "{2EDF7189-FA43-4658-93BB-A43AAD957512}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -122,6 +124,10 @@ Global
 		{E07785EC-3E8C-4214-9C67-0BE489B74150}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E07785EC-3E8C-4214-9C67-0BE489B74150}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E07785EC-3E8C-4214-9C67-0BE489B74150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EDF7189-FA43-4658-93BB-A43AAD957512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EDF7189-FA43-4658-93BB-A43AAD957512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EDF7189-FA43-4658-93BB-A43AAD957512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EDF7189-FA43-4658-93BB-A43AAD957512}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
